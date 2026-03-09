@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>🎵 My Playlist</h2>
+
+    <button id="themeToggle">🌙</button>
+
+    <input type="text" id="search" placeholder="Search songs...">
+
+    <ul id="songList"></ul>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div class="now-playing">
+      <img id="cover" src="images/cover1.jpg">
+      <h2 id="title">Song Title</h2>
+      <p id="artist">Artist</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="shuffle">🔀</button>
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+      <button id="repeat">🔁</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progress" value="0">
+      <span id="duration">0:00</span>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume-container">
+      <span id="volIcon">🔊</span>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+
+  </div>
+
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
